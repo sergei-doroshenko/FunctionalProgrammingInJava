@@ -8,10 +8,9 @@
 ***/
 package fpij;
 
-import java.util.List;
-import java.util.Arrays;
-import static fpij.Folks.friends;
 import java.util.function.Consumer;
+
+import static fpij.Folks.friends;
 
 public class Iteration {
   public static void main(final String[] args) {

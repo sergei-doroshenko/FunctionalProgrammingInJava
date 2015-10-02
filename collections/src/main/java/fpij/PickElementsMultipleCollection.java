@@ -19,43 +19,43 @@ import static fpij.Folks.editors;
 
 public class PickElementsMultipleCollection {
   public static void main(final String[] args) {
-{
-    final long countFriendsStartN = 
-      friends.stream()
-             .filter(name -> name.startsWith("N")).count();
+    {
+        final long countFriendsStartN =
+          friends.stream()
+                 .filter(name -> name.startsWith("N")).count();
 
-    final long countEditorsStartN = 
-      editors.stream()
-             .filter(name -> name.startsWith("N")).count();
+        final long countEditorsStartN =
+          editors.stream()
+                 .filter(name -> name.startsWith("N")).count();
 
-    final long countComradesStartN = 
-      comrades.stream()
-              .filter(name -> name.startsWith("N")).count();
+        final long countComradesStartN =
+          comrades.stream()
+                  .filter(name -> name.startsWith("N")).count();
 
-    System.out.println(countFriendsStartN);
-    System.out.println(countComradesStartN);
-    System.out.println(countEditorsStartN);
-}
+        System.out.println(countFriendsStartN);
+        System.out.println(countEditorsStartN);
+        System.out.println(countComradesStartN);
+    }
 
-{
-    final Predicate<String> startsWithN = name -> name.startsWith("N");
+    {
+        final Predicate<String> startsWithN = name -> name.startsWith("N");
 
-    final long countFriendsStartN = 
-      friends.stream()
-             .filter(startsWithN)
-             .count();
-    final long countEditorsStartN = 
-      editors.stream()
-             .filter(startsWithN)
-             .count();
-    final long countComradesStartN = 
-      comrades.stream()
-              .filter(startsWithN)
-              .count();
+        final long countFriendsStartN =
+          friends.stream()
+                 .filter(startsWithN)
+                 .count();
+        final long countEditorsStartN =
+          editors.stream()
+                 .filter(startsWithN)
+                 .count();
+        final long countComradesStartN =
+          comrades.stream()
+                  .filter(startsWithN)
+                  .count();
 
-    System.out.println(countFriendsStartN);
-    System.out.println(countComradesStartN);
-    System.out.println(countEditorsStartN);
-}
+        System.out.println(countFriendsStartN);
+        System.out.println(countEditorsStartN);
+        System.out.println(countComradesStartN);
+    }
   }
 }

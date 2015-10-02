@@ -14,10 +14,11 @@ import java.util.function.Predicate;
 import static fpij.Folks.friends;
 
 public class PickDifferentNames {
+
   public static Predicate<String> checkIfStartsWith(final String letter) {
-    return name -> name.startsWith(letter);
+        return name -> name.startsWith(letter);
   }
-  
+
   public static void main(final String[] args) {
     {
         final Predicate<String> startsWithN = name -> name.startsWith("N");
@@ -34,11 +35,13 @@ public class PickDifferentNames {
         System.out.println(countFriendsStartN);
         System.out.println(countFriendsStartB);
     }
-      System.out.println("--------------------------------------------------------");
+
+    System.out.println("--------------------------------------------------------");
+
     {
         final long countFriendsStartN =
           friends.stream()
-                 .filter(checkIfStartsWith("N")).count();
+                 .filter(checkIfStartsWith("N")).count(); // look for checkIfStartsWith Predicate above
         final long countFriendsStartB =
           friends.stream()
                  .filter(checkIfStartsWith("B")).count();
@@ -47,10 +50,11 @@ public class PickDifferentNames {
         System.out.println(countFriendsStartN);
         System.out.println(countFriendsStartB);
     }
-      System.out.println("--------------------------------------------------------");
+
+    System.out.println("--------------------------------------------------------");
+
     {
-        final Function<String, Predicate<String>> startsWithLetter =
-          (String letter) -> {
+        final Function<String, Predicate<String>> startsWithLetter = (String letter) -> {
             Predicate<String> checkStarts = (String name) -> name.startsWith(letter);
             return checkStarts;
         };
@@ -66,7 +70,9 @@ public class PickDifferentNames {
         System.out.println(countFriendsStartN);
         System.out.println(countFriendsStartB);
     }
-      System.out.println("--------------------------------------------------------");
+
+    System.out.println("--------------------------------------------------------");
+
     {
         final Function<String, Predicate<String>> startsWithLetter =
           (String letter) -> (String name) -> name.startsWith(letter);
@@ -82,7 +88,9 @@ public class PickDifferentNames {
         System.out.println(countFriendsStartN);
         System.out.println(countFriendsStartB);
     }
-      System.out.println("--------------------------------------------------------");
+
+    System.out.println("--------------------------------------------------------");
+
     {
         final Function<String, Predicate<String>> startsWithLetter =
           letter -> name -> name.startsWith(letter);

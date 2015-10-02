@@ -14,8 +14,7 @@ import java.util.Arrays;
 import static fpij.Folks.friends;
 
 public class PickAnElement {
-  public static void pickName(
-    final List<String> names, final String startingLetter) {
+  public static void pickName(final List<String> names, final String startingLetter) {
     String foundName = null;
     for(String name : names) {
       if(name.startsWith(startingLetter)) {

@@ -13,4 +13,12 @@
         <artifactId>FunctionalProgrammingInJava</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.sergei</groupId>
+            <artifactId>designing</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

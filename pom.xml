@@ -13,6 +13,7 @@
         <module>designing</module>
         <module>introduction</module>
         <module>collections</module>
+        <module>compare</module>
     </modules>
 
     <dependencies>
